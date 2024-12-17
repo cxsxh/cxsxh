@@ -1,11 +1,10 @@
 package com.itheima.pojo;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 public class User {
     private Integer id;
@@ -13,6 +12,14 @@ public class User {
     private String password;
     private String name;
     private Integer age;
+
+    public User(Integer id, String username, String password, String name, Integer age) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.age = age;
+    }
 
     @Override
     public String toString() {
